@@ -1,5 +1,0 @@
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^rcp.co.id$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.rcp.co.id$
-RewriteCond %{REQUEST_URI} !rcpstatic/
-RewriteRule (.*) /rcpstatic/$1 [L]
