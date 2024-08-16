@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+import Banner from "../components/Banner.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="PT RAHAYU CARITA PERKASA | Services">
+	<Header />
+	<Banner
+		title="Services"
+		image="/assets/header-service2.jpg"
+	/>
+	<div class="row py-[6.5em]">
+		<Card
+			reverse={false}
+			image="/assets/header-lifeboat.jpg"
+			href="/services/lifeboat-service-and-maintenance"
+			title="Lifeboat Service and Maintenance"
+			body="Our 15,000 sq foot covered service center provides full facilities for Rehooking in accordance with..."
+		/>
+	</div>
+	<Footer />
+</Layout>

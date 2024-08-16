@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+import Slider from "../components/Slider.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="PT RAHAYU CARITA PERKASA">
+	<Header />
+	<Slider />
+	<div class="row py-[6.5em]">
+		<Card
+			reverse={false}
+			image="/assets/header-product-survitec2.jpg"
+			href="./products/survitec-survival-technology"
+			title="SURVITEC SURVIVAL TECHNOLOGY"
+			body="We are pioneers of Survival Technology. Our wearable survival equipment, fire solutions and survival craft technology keep people safe when their life depends on it."
+		/>
+		<Card
+			reverse={true}
+			image="/assets/header-habekke.jpg"
+			href="./products/habbeke-shipyard"
+			title="HABBEKÉ SHIPYARD"
+			body="Habbeké Shipyard, established in 1966, has more than fifty years experience of quality shipbuilding."
+		/>
+		<Card
+			reverse={false}
+			image="/assets/header-product-osmosis.jpg"
+			href="./products/pci-water-makers"
+			title="PCI WATER MAKERS"
+			body="The Neptune+ OG is built to meet the demanding needs of the Oil and Gas, Rental Fleets, Isolated Island applications, or anywhere environmental conditions require solid engineering, and trouble-free operation."
+		/>
+	</div>
+	<Footer />
+</Layout>

@@ -1,0 +1,33 @@
+---
+interface Props {
+	image: string;
+	title: string;
+	body: string;
+	href: string;
+	reverse: boolean;
+}
+
+const { reverse, image, href, title, body } = Astro.props;
+---
+
+<div class={reverse ? "flex lg:flex-row-reverse flex-col " : "flex flex-col lg:flex-row"}>
+	<div class="w-full lg:w-1/2">
+		<img
+			src={image}
+			class="object-cover aspect-video lg:aspect-square w-full"
+		/>
+	</div>
+	<div class="w-full lg:w-1/2 text-white flex flex-col items-start justify-center p-[2em] lg:p-[6.5em] bg-[#a9b3b7] space-y-6">
+		<h4 class="text-white mb-0">{title}</h4>
+		<p class="text-white">
+			{body}
+		</p>
+		<div>
+			<a
+				href={href}
+				class="button"
+				>Go to Details</a
+			>
+		</div>
+	</div>
+</div>

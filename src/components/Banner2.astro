@@ -1,0 +1,23 @@
+---
+interface Props {
+	image: string;
+	title: string;
+}
+
+const { title, image } = Astro.props;
+---
+
+<section class="banner">
+	<div class="w-full max-h-[50vh] overflow-hidden">
+		<img
+			src={image}
+			class="object-cover"
+		/>
+	</div>
+	<div class="bg-[#F4F4F4]">
+		<div class="row py-[2em] lg:py-[6.5em] text-center">
+			<h2 class="text-[#343434] inline-block text-center font-bold">{title}</h2>
+			<p class="italic font-normal">{Astro.url.pathname}</p>
+		</div>
+	</div>
+</section>

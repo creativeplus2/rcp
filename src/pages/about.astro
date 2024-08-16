@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+import Banner from "../components/Banner.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="PT RAHAYU CARITA PERKASA | About">
+	<Header />
+	<Banner
+		title="About"
+		image="/assets/banner-about.jpg"
+	/>
+	<div class="row py-[6.5em]">
+		<Card
+			reverse={false}
+			image="/assets/header-about-us.jpg"
+			href="/about/about-us"
+			title="About Us"
+			body="PT RAHAYU CARITA PERKASA was established on February 24th, 1999. The company started as a general supplier for all types of equipment, tools, software solutions and maintenance services to support the oil and gas industry of Indonesia."
+		/>
+		<Card
+			reverse={true}
+			image="/assets/header-ceo.jpg"
+			href="/about/message-from-ceo"
+			title="Message from the CEO"
+			body="For almost two decades now, PT. Rahayu Carita Perkasa (RCP) has served the nation. Among other services, we specialize in the service, repair, refurbishment and up-grading of lifeboats for ships, rigs and offshore oil & gas platforms. "
+		/>
+	</div>
+	<Footer />
+</Layout>

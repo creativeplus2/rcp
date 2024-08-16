@@ -1,0 +1,21 @@
+---
+interface Props {
+	image: string;
+	title: string;
+}
+
+const { title, image } = Astro.props;
+---
+
+<section class="banner h-[25vh] lg:h-[50vh] flex relative justify-center items-center overflow-hidden">
+	<div class="background absolute w-full h-full">
+		<img
+			src={image}
+			class="object-cover h-full w-full"
+		/>
+	</div>
+
+	<div class="row flex justify-center">
+		<h1 class="inline-block text-white">{title}</h1>
+	</div>
+</section>
