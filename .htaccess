@@ -6,4 +6,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /rcpstatic/$1
 RewriteCond %{HTTP_HOST} ^(www.)?rcp.co.id$
-RewriteRule ^(/)?$ rcpstatic/ [L]
+RewriteRule ^(/)?$ rcpstatic/index.html [L]
