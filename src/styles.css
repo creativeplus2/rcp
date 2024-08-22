@@ -129,6 +129,10 @@
 	.mobile-nav{
 		@apply  h-0 block invisible
 	}
+	.mobile-nav ul li{
+		@apply  mb-0 py-2
+	}
+
 	.mobile-nav.active{
 		@apply  h-full visible
 	}
@@ -146,7 +150,10 @@
 		@apply h-[60px]
 	}
 	.header.scroll-scrolled {
-		@apply  fixed z-50 ;
+		@apply  fixed z-50 shadow-lg;
+	}
+	.header.scroll-scrolled .agents{
+		@apply hidden
 	}
 
 
