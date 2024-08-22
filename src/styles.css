@@ -89,7 +89,7 @@
 	/* ------------------------- CUSTOM CONTAINER -------------------------------------------------- */
 
 	.row {
-		@apply relative mx-auto w-full max-w-full lg:max-w-[1170px] px-[18px];
+		@apply relative mx-auto w-full max-w-full lg:max-w-[1170px] px-[18px] py-[2.5em] lg:py-[6.5em];
 	}
     .row-small{
         @apply relative mx-auto w-full max-w-full lg:max-w-[780px] px-[16px];
