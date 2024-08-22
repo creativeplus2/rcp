@@ -17,7 +17,12 @@
 		font-family: "Montserrat", sans-serif;
         -webkit-font-smoothing: antialiased;
 	}
-
+	.row a{
+		@apply text-[#2C4793] 
+	}
+	.header a{
+		@apply text-dark
+	}
 	body {
 		@apply font-normal text-dark;
 	}
@@ -52,7 +57,13 @@
 		@apply text-white
     }
     .button{
-        @apply bg-[#ec1d23] uppercase text-white text-[0.625em] rounded-[100px] px-[1.625em] py-[.8em] tracking-wider
+        @apply transform duration-300 ease-in bg-[#ec1d23] uppercase text-white text-[0.625em] rounded-[100px] px-[1.625em] py-[.8em] tracking-wider
+    }
+	a.button {
+        @apply  text-white
+    }
+	.button:hover{
+        @apply bg-[#BD1A30]
     }
 	.swiper {
 		width: 100%;
@@ -116,10 +127,10 @@
 		@apply bg-[#343434];
 	}
 	.mobile-nav{
-		@apply transform duration-300 ease-in h-0 hidden
+		@apply  h-0 block invisible
 	}
 	.mobile-nav.active{
-		@apply flex h-full 
+		@apply  h-full visible
 	}
 
 	.header {
@@ -164,34 +175,6 @@
 		@apply h-[1em] bg-transparent before:h-[3px] before:bg-primary opacity-100;
 	}
 
-	/* ------------------------- THEME-DARK -------------------------------------------------- */
-	.theme-dark {
-		@apply bg-dark text-light;
-	}
-	.theme-dark h1,
-	.theme-dark h2,
-	.theme-dark h3,
-	.theme-dark h4,
-	.theme-dark h5,
-	.theme-dark h6,
-	.theme-dark .prose,
-	.theme-dark strong,
-	.theme-dark p {
-		@apply text-light;
-	}
-	.theme-dark .prose a {
-		@apply -light;
-	}
-	.theme-dark a:hover {
-		@apply text-kuning;
-	}
-	.homeslider-button-next.swiper-button-lock,
-	.homeslider-button-prev.swiper-button-lock,
-	.upcomingevent-button-prev.swiper-button-lock,
-	.upcomingevent-button-next.swiper-button-lock,
-	.swiper-button-disabled {
-		display: none !important;
-	}
 
 	/* ------------------------- FOOTER -------------------------------------------------- */
 	.footer-bottom .prose p {
