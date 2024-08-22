@@ -21,7 +21,7 @@
 		@apply text-[#2C4793] 
 	}
 	.header a{
-		@apply text-dark
+		@apply text-[rgb(118_118_118)]
 	}
 	body {
 		@apply font-normal text-dark;
