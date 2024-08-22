@@ -153,7 +153,7 @@
 		@apply  fixed z-50 shadow-lg;
 	}
 	.header.scroll-scrolled .agents{
-		@apply hidden
+		@apply hidden lg:flex
 	}
 
 
