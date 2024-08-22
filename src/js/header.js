@@ -1,6 +1,6 @@
 function initCheckScrollUpDown() {
 	var lastScrollTop = 0;
-	var threshold = 200;
+	var threshold = 0;
 	const navbar = document.querySelector(".header");
 
 	/**

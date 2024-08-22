@@ -138,7 +138,7 @@
 	}
 
 	.header {
-		@apply transform duration-300 ease-in w-full bg-white  flex justify-center ;
+		@apply transform duration-300 ease-in w-full bg-white  flex justify-center;
 	}
 	.header img{
 		@apply transform duration-300 ease-in
@@ -150,7 +150,13 @@
 		@apply h-[60px]
 	}
 	.header.scroll-scrolled {
-		@apply  fixed z-50 shadow-lg;
+		@apply  fixed z-50 shadow-lg ;
+	}
+	.header.scroll-scrolled .logo img{
+		@apply h-[50px] lg:h-[65px]
+	}
+	.header.scroll-scrolled .agents img{
+		@apply h-[50px] lg:h-[60px]
 	}
 	.header.scroll-scrolled .agents{
 		@apply hidden lg:flex
