@@ -5,7 +5,6 @@
 
 @layer base {
 	:root {
-		--swiper-pagination-bottom: 50px;
 		--swiper-pagination-color: white;
 		--swiper-navigation-color: white;
 		--swiper-navigation-size:18px;
