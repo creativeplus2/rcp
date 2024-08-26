@@ -32,14 +32,16 @@ import { ViewTransitions, fade } from "astro:transitions";
 		<title>{frontmatter.title}</title>
 		<ViewTransitions />
 	</head>
-	<body transition:animate="fade">
+	<body>
 		<Header />
 		<Banner2
 			title={frontmatter.titlebanner}
 			image={frontmatter.imagerbanner}
 		/>
 
-		<main class="row-small py-[2em] lg:py-[6.5em] prose">
+		<main
+			class="row-small py-[2em] lg:py-[6.5em] prose"
+			transition:animate="fade">
 			<slot />
 		</main>
 
