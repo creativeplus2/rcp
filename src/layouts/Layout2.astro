@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Banner2 from "../components/Banner2.astro";
 import Footer from "../components/Footer.astro";
 import "../styles.css";
+import { ViewTransitions, fade } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -29,6 +30,7 @@ import "../styles.css";
 		/>
 
 		<title>{frontmatter.title}</title>
+		<ViewTransitions />
 	</head>
 	<body>
 		<Header />
@@ -37,9 +39,11 @@ import "../styles.css";
 			image={frontmatter.imagerbanner}
 		/>
 
-		<div class="row-small py-[2em] lg:py-[6.5em] prose">
+		<main
+			class="row-small py-[2em] lg:py-[6.5em] prose"
+			transition:animate="fade">
 			<slot />
-		</div>
+		</main>
 
 		<Footer />
 		<script>
