@@ -53,6 +53,8 @@ import "../styles.css";
 			import { initCheckScrollUpDown, hamburgerButton } from "../js/header.js";
 			initCheckScrollUpDown();
 			hamburgerButton();
+			document.addEventListener("astro:after-swap", initCheckScrollUpDown);
+			document.addEventListener("astro:after-swap", hamburgerButton);
 		</script>
 		<script is:inline>
 			var swiper = new Swiper(".mySwiper", {
