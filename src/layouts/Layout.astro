@@ -55,6 +55,7 @@ import "../styles.css";
 			hamburgerButton();
 			document.addEventListener("astro:after-swap", initCheckScrollUpDown);
 			document.addEventListener("astro:after-swap", hamburgerButton);
+			document.addEventListener("astro:after-swap", () => window.scrollTo({ left: 0, top: 0, behavior: "instant" }));
 		</script>
 		<script is:inline>
 			var swiper = new Swiper(".mySwiper", {
