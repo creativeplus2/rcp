@@ -58,19 +58,23 @@ import "../styles.css";
 			document.addEventListener("astro:after-swap", () => window.scrollTo({ left: 0, top: 0, behavior: "instant" }));
 		</script>
 		<script is:inline>
-			var swiper = new Swiper(".mySwiper", {
-				loop: true,
-				autoplay: {
-					delay: 5000,
-				},
-				navigation: {
-					nextEl: ".swiper-button-next",
-					prevEl: ".swiper-button-prev",
-				},
-				pagination: {
-					el: ".swiper-pagination",
-				},
-			});
+			function runswiper() {
+				var swiper = new Swiper(".mySwiper", {
+					loop: true,
+					autoplay: {
+						delay: 5000,
+					},
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					},
+					pagination: {
+						el: ".swiper-pagination",
+					},
+				});
+			}
+			runswiper();
+			document.addEventListener("astro:after-swap", runswiper);
 		</script>
 	</body>
 </html>
