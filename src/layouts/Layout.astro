@@ -4,7 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
-import { ViewTransitions } from "astro:transitions";
+import { ViewTransitions, fade } from "astro:transitions";
 import Header from "../components/Header.astro";
 
 import "../styles.css";
@@ -41,7 +41,7 @@ import "../styles.css";
 	</head>
 	<body>
 		<Header />
-		<main transition:animate="fade">
+		<main transition:animate={fade({ duration: ".5s" })}>
 			<slot />
 		</main>
 		<script
@@ -53,11 +53,12 @@ import "../styles.css";
 			import { initCheckScrollUpDown, hamburgerButton } from "../js/header.js";
 			initCheckScrollUpDown();
 			hamburgerButton();
+			document.addEventListener("astro:after-swap", () => window.scrollTo({ left: 0, top: 0, behavior: "instant" }));
+
 			document.addEventListener("astro:after-swap", initCheckScrollUpDown);
 			document.addEventListener("astro:after-swap", hamburgerButton);
-			document.addEventListener("astro:after-swap", () => window.scrollTo({ left: 0, top: 0, behavior: "instant" }));
 		</script>
-		<script is:inline>
+		<script is:inline data-astro-rerun>
 			function runswiper() {
 				var swiper = new Swiper(".mySwiper", {
 					loop: true,
@@ -74,7 +75,6 @@ import "../styles.css";
 				});
 			}
 			runswiper();
-			document.addEventListener("astro:after-swap", runswiper);
 		</script>
 	</body>
 </html>

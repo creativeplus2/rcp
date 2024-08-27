@@ -16,6 +16,7 @@
 	html {
 		font-family: "Montserrat", sans-serif;
         -webkit-font-smoothing: antialiased;
+		scroll-behavior: instant !important;
 	}
 	.row a{
 		@apply text-[#2C4793] 

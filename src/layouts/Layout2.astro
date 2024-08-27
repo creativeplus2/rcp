@@ -1,58 +1,19 @@
 ---
-const { frontmatter } = Astro.props;
-import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
 import Banner2 from "../components/Banner2.astro";
 import Footer from "../components/Footer.astro";
-import "../styles.css";
-import { ViewTransitions, fade } from "astro:transitions";
+const { frontmatter } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="description"
-			content="PT RAHAYU CARITA PERKASA was established on February 24th, 1999. The company started as a general supplier for all types of equipment, tools, software solutions and maintenance services to support the oil and gas industry of Indonesia."
-		/>
-		<meta
-			name="viewport"
-			content="width=device-width"
-		/>
-		<meta
-			name="generator"
-			content={Astro.generator}
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			href="/favicon.png"
-		/>
+<Layout title={"PT RAHAYU CARITA PERKASA |" + frontmatter.titlebanner}>
+	<Banner2
+		title={frontmatter.titlebanner}
+		image={frontmatter.imagerbanner}
+	/>
 
-		<title>{frontmatter.title}</title>
-		<ViewTransitions />
-	</head>
-	<body>
-		<Header />
-		<Banner2
-			title={frontmatter.titlebanner}
-			image={frontmatter.imagerbanner}
-		/>
+	<div class="row-small py-[2em] lg:py-[6.5em] prose">
+		<slot />
+	</div>
 
-		<main
-			class="row-small py-[2em] lg:py-[6.5em] prose"
-			transition:animate="fade">
-			<slot />
-		</main>
-
-		<Footer />
-		<script>
-			import { initCheckScrollUpDown, hamburgerButton } from "../js/header.js";
-			initCheckScrollUpDown();
-			hamburgerButton();
-			document.addEventListener("astro:after-swap", initCheckScrollUpDown);
-			document.addEventListener("astro:after-swap", hamburgerButton);
-			document.addEventListener("astro:after-swap", () => window.scrollTo({ left: 0, top: 0, behavior: "instant" }));
-		</script>
-	</body>
-</html>
+	<Footer />
+</Layout>
